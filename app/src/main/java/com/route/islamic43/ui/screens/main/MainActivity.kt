@@ -8,6 +8,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.route.islamic43.R
 import com.route.islamic43.ui.screens.main.fragments.hadeth.HadethFragment
 import com.route.islamic43.ui.screens.main.fragments.quran.QuranFragment
+import com.route.islamic43.ui.screens.main.fragments.sebha.SebhaFragment
 
 class MainActivity : AppCompatActivity() {
     lateinit var bottomNavigation: BottomNavigationView
@@ -27,8 +28,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 R.id.sebhaTab -> {
-                    Toast.makeText(this, "Task", Toast.LENGTH_SHORT).show()
-                    return@setOnItemSelectedListener false
+                    showFragment(SebhaFragment())
                 }
 
                 R.id.radioTab -> {
